@@ -24,8 +24,9 @@ class ThemeController extends GetxController {
     primaryColor.value =
         Color(Hive.box('appPrefs').get("themePrimaryColor") ?? 4278199603);
 
+    // Change default from 0 (dynamic) to 2 (dark)
     changeThemeModeType(
-        ThemeType.values[Hive.box('appPrefs').get("themeModeType") ?? 0]);
+        ThemeType.values[Hive.box('appPrefs').get("themeModeType") ?? 2]);
 
     _listenSystemBrightness();
 
@@ -161,7 +162,9 @@ class ThemeController extends GetxController {
           textSelectionTheme: TextSelectionThemeData(
               cursorColor: primarySwatch[200],
               selectionColor: primarySwatch[200],
-              selectionHandleColor: primarySwatch[200]), dialogTheme: DialogThemeData(backgroundColor: primarySwatch[700]), tabBarTheme: const TabBarThemeData(indicatorColor: Colors.white)
+              selectionHandleColor: primarySwatch[200]),
+          dialogTheme: DialogThemeData(backgroundColor: primarySwatch[700]),
+          tabBarTheme: const TabBarThemeData(indicatorColor: Colors.white)
           //scaffoldBackgroundColor: primarySwatch[700]
           );
       return baseTheme.copyWith(
