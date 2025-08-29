@@ -15,6 +15,8 @@ This is a significantly enhanced fork of the original [Harmony Music](https://gi
 - **Package Name Update**: Updated from `com.anandnet.harmonymusic` to `com.jon4short.harmonic`
 - **JNI Bindings Fix**: Corrected package name mismatches in Android Kotlin bindings
 - **Permission Fixes**: Added necessary Android permissions for audio effects
+- **Cross-Platform Audio Backend**: Media Kit integration for consistent audio experience across platforms
+- **Modern Dependencies**: Updated to latest versions of key packages
 
 ### 🎚️ Audio Features
 - **Built-in Equalizer**: 10-band equalizer with ±15dB range and 7 preset profiles
@@ -22,12 +24,24 @@ This is a significantly enhanced fork of the original [Harmony Music](https://gi
 - **Media Kit Integration**: Direct MPV audio filter support (when available)
 - **System Equalizer Fallback**: Automatic fallback to Android system equalizer
 - **Nothing Device Support**: Special handling for Nothing phones/buds audio processing
+- **Advanced Audio Processing**: Pitch control and audio enhancement features
+- **Loudness Normalization**: Automatic volume leveling across tracks
+- **Skip Silence**: Automatically skip silent portions in tracks
+- **Pitch Control**: Adjustable pitch from -6 to +6 semitones with visual feedback
 
 ### 📱 UI/UX Enhancements
 - **Modern Material Design 3**: Updated UI with Material Design 3 components
 - **Equalizer Screen**: Dedicated equalizer interface with vertical sliders
 - **Preset Chips**: Easy selection of audio profiles
 - **Real-time Feedback**: Visual indicators for active equalizer settings
+- **Improved Navigation**: Enhanced sidebar and tab navigation
+- **Dynamic Themes**: System-aware dark/light mode with custom color schemes
+- **Pitch Control Interface**: Intuitive slider and buttons for pitch adjustment
+
+### 🎵 Music Intelligence Features
+- **Key Detection**: Automatic musical key detection using AudioFlux library
+- **Musical Analysis**: Advanced audio analysis capabilities
+- **Smart Playlists**: Algorithmically generated music recommendations
 
 ### 🧪 Testing & Quality
 - **Comprehensive Test Suite**: 12 test cases covering equalizer functionality
@@ -39,6 +53,7 @@ This is a significantly enhanced fork of the original [Harmony Music](https://gi
 - **Removed Unnecessary Files**: Deleted 17+ temporary scripts and test files
 - **Unused Import Cleanup**: Removed 9+ unused import warnings
 - **Code Modernization**: Updated deprecated methods and practices
+- **Performance Improvements**: Optimized audio streaming and caching
 
 ## 📋 Major Changes from Original
 
@@ -47,12 +62,16 @@ This is a significantly enhanced fork of the original [Harmony Music](https://gi
 2. **Audio Processing**: Enhanced audio filter implementation using MPV superequalizer
 3. **Device Compatibility**: Special handling for Nothing ecosystem devices
 4. **Error Handling**: Robust error handling with proper logging instead of print statements
+5. **Cross-Platform Consistency**: Unified audio backend using Media Kit for all platforms
+6. **Pitch Control**: Added pitch shifting capability from -6 to +6 semitones
 
 ### Code Structure
 1. **New Models**: `EqualizerBand`, `EqualizerPreset`, `EqualizerConfig` data models
 2. **Services**: `MediaKitEqualizer` service for audio processing
 3. **UI Components**: Dedicated equalizer screen with Material Design 3
 4. **Testing**: Comprehensive test suite for new functionality
+5. **Audio Intelligence**: Key detection service with AudioFlux integration
+6. **Pitch Control**: Player controller enhancements for pitch management
 
 ### Android Integration
 1. **Package Name**: Changed from `com.anandnet.harmonymusic` to `com.jon4short.harmonic`
@@ -62,20 +81,61 @@ This is a significantly enhanced fork of the original [Harmony Music](https://gi
 
 ## 🎯 Features
 
-All original Harmony Music features plus:
+All original Harmony Music features plus these enhancements:
 
-* ✅ Enhanced Equalizer with 10-band control
+### 🔊 Audio Features
+* ✅ Enhanced Equalizer with 10-band control (±15dB range)
+* ✅ 7 Built-in Presets (Flat, Rock, Pop, Jazz, Classical, Bass Boost, Vocal Boost)
 * ✅ Custom preset saving/loading
-* ✅ System equalizer fallback
+* ✅ System equalizer fallback for Android
 * ✅ Nothing device audio processing compatibility
-* ✅ Modern Material Design 3 UI
+* ✅ Pitch control and audio enhancement (-6 to +6 semitones)
+* ✅ Loudness normalization
+* ✅ Skip silence functionality
+* ✅ Advanced audio filtering via MPV
+
+### 🎵 Music Intelligence
+* ✅ Automatic musical key detection (using AudioFlux)
+* ✅ Smart music analysis and recommendations
+* ✅ Synced and plain lyrics support
+
+### 📱 UI/UX Features
+* ✅ Modern Material Design 3 interface
+* ✅ Dedicated equalizer screen with visual sliders
+* ✅ Preset selection chips for quick access
+* ✅ Dynamic theming with system integration
+* ✅ Improved navigation with sidebar and tabs
+* ✅ Enhanced player interface with visual feedback
+* ✅ Pitch control slider with real-time feedback
+
+### 🛠️ Technical Features
 * ✅ Comprehensive testing suite
-* ✅ Production-ready logging
+* ✅ Production-ready logging framework
 * ✅ Improved code quality and maintainability
+* ✅ Cross-platform audio consistency (Android, Windows, Linux)
+* ✅ Better error handling and recovery
+* ✅ Performance optimizations
+
+### 🎯 Core Music Features
+* ✅ Play songs from YouTube/YouTube Music
+* ✅ Song caching while playing
+* ✅ Radio feature support
+* ✅ Background music playback
+* ✅ Playlist creation & bookmark support
+* ✅ Artist & Album bookmark support
+* ✅ Import songs, playlists, albums, artists via sharing from YouTube/YouTube Music
+* ✅ Streaming quality control
+* ✅ Song downloading support
+* ✅ Multi-language support
+* ✅ Sleep timer
+* ✅ No advertisements
+* ✅ No login required
+* ✅ Piped playlist integration
+* ✅ Android Auto support
 
 ## 📱 Platforms
 
-* Android (Primary focus)
+* Android (Primary focus with Media Kit backend)
 * Windows (Media Kit support)
 * Linux (Media Kit support)
 
@@ -84,6 +144,8 @@ All original Harmony Music features plus:
 All original dependencies plus:
 * Enhanced Media Kit integration for audio processing
 * Proper logging framework implementation
+* AudioFlux for musical key detection
+* Modern Flutter packages for better UI/UX
 
 ## 🙏 Credits & Acknowledgments
 
