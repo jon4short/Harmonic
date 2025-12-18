@@ -5,10 +5,13 @@
 *.swp
 .DS_Store
 .atom/
+.build/
 .buildlog/
 .history
 .svn/
+.swiftpm/
 migrate_working_dir/
+.og_app/
 
 # IntelliJ related
 *.iml
@@ -69,4 +72,3 @@ settings.json
 android/app/.cxx/Debug/*
 
 /android/app/.cxx
-
