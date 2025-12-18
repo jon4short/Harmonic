@@ -1,3 +1,11 @@
+## 2.0.1
+* Fixed search functionality issue ("No Match Found" error)
+* Incorporated upstream fixes from Harmony Music v1.12.1
+* Added search chips functionality for improved search filtering
+* Fixed null safety issues in search parsing
+* Updated logging framework with proper error handling
+* Resolved MediaItem import issue in music service
+
 ## 1.13.0
 * Added Key detection feature
 * Added Pitch Shift feature

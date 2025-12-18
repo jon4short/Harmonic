@@ -500,11 +500,10 @@ List<dynamic> parsePlaylistItems(List<dynamic> results,
         'browseId'
       ]);
       videoId = creditId?.split("MPTC")[1];
-      
     }
 
-    if(isAlbum){
-      // Contains track number and total tracks 
+    if (isAlbum) {
+      // Contains track number and total tracks
       trackDetails = data?["index"] != null
           ? "${nav(data, ['index', 'runs', 0, 'text'])}/${results.length}"
           : null;
@@ -711,9 +710,9 @@ List<dynamic> parseSearchResults(List<dynamic> results,
 }
 
 dynamic parseSearchResult(Map<String, dynamic> data,
-    List<String> searchResultTypes, String? resultType, String category) {
+    List<String> searchResultTypes, String? resultType, String? category) {
   if ((resultType != null && resultType.contains("playlist")) ||
-      category.contains("playlists")) {
+      category!.contains("playlists")) {
     resultType = 'playlist';
   }
   int defaultOffset = (resultType == null) ? 2 : 0;
